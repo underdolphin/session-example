@@ -1,0 +1,59 @@
+{
+    "rules": {
+        "align": [
+            true,
+            "statements"
+        ],
+        "ban": false,
+        "class-name": true,
+        "curly": true,
+        "eofline": false,
+        "forin": false,
+        "indent": [
+            true, "spaces"
+        ],
+        "jsdoc-format": true,
+        "no-consecutive-blank-lines": [
+            true, 2
+        ],
+        "no-construct": true,
+        "no-shadowed-variable": true,
+        "no-empty": true,
+        "no-eval": true,
+        "no-switch-case-fall-through": true,
+        "trailing-comma": [
+            true, {
+                "multiline": "never",
+                "singleline": "never"
+            }
+        ],
+        "no-trailing-whitespace": true,
+        "no-unused-expression": true,
+        "no-unused-variable": [
+            false
+        ],
+        "no-use-before-declare": true,
+        "no-var-keyword": true,
+        "one-line": [
+            true,
+            "check-catch",
+            "check-else",
+            "check-open-brace",
+            "check-whitespace"
+        ],
+        "quotemark": [
+            true,
+            "single"
+        ],
+        "semicolon": [
+            true,
+            "always"
+        ],
+        "switch-default": true,
+        "triple-equals": true,
+        "variable-name": [
+            true,
+            "check-format"
+        ]
+    }
+}

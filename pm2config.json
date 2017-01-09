@@ -1,9 +1,11 @@
 {
     "apps": [{
-        "name": "oidc-example",
+        "name": "session-example",
         "script": "./dist/index.js",
         "watch": ["dist"],
-        "ignore_watch": ["node_modules", "dist/view"],
+        "ignore_watch": ["node_modules","dist/db","dist/view"],
+        "instances": "max",
+        "exec_mode": "cluster",
         "env": {
             "NODE_ENV": "development",
             "PORT": 1337

@@ -5,8 +5,7 @@
         "target": "es5",
         "removeComments": true,
         "module": "commonjs",
-        "declaration": true,
-        "allowJs": true
+        "declaration": true
     },
     "exclude": [
         "build",

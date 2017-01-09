@@ -48,5 +48,8 @@ jspm_packages
 
 # build
 build
-dist
+dist/view
+dist/**/*.js
+dist/db/**
+!dist/db/.gitkeep
 test

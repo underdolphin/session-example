@@ -95,20 +95,8 @@ gulp.task('tsCompile', () => {
         .pipe(gulp.dest('./build/'));
 });
 
-gulp.task('browserify', () => {
-    browserify({
-            entries: ['./build/view/script.js']
-        })
-        .bundle()
-        .pipe(plumber())
-        .pipe(source('script.min.js'))
-        .pipe(buffer())
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist/view/'))
-});
-
 gulp.task('server:uglify', () => {
-    gulp.src(['./build/app/**/*.js', './build/index.js'], {
+    gulp.src(['./build/app/**/*.js', './build/view/**/*.js', './build/index.js'], {
             base: 'build'
         })
         .pipe(plumber())
@@ -140,9 +128,8 @@ gulp.task('watch', () => {
     gulp.watch('src/view/**/*.css', ['css', reload]);
     gulp.watch(['src/test/**/*.ts'], ['testCompile']);
     gulp.watch(['src/index.ts', 'src/app/**/*.ts', 'src/view/**/*.ts'], ['tsCompile']);
-    gulp.watch(['build/index.js', 'build/app/**/*.js'], ['server:uglify']);
+    gulp.watch(['build/index.js', 'build/view/**/*.js', 'build/app/**/*.js'], ['server:uglify']);
     gulp.watch('build/test/**/*.js', ['testify']);
-    gulp.watch('build/view/**/*.js', ['browserify', reload]);
     gulp.watch('test/testlib.min.js', ['test']);
 });
 
